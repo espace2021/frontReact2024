@@ -1,9 +1,14 @@
 
+import React,{useState,useEffect} from 'react'
+import {  useSelector } from "react-redux";
 import {Link} from 'react-router-dom';
 import {Grid,Button} from '@mui/material';
 
-
 const Home = () => {
+    
+   
+    const {user} = useSelector((state) => state.auth);
+    
     
   return (
      
@@ -14,9 +19,13 @@ const Home = () => {
                 </Link>
                 </Button> 
                 <Button>
-                <Link to="/login" variant="body2">
-                   Sign in
+                {user ? <Link to="/logout" variant="body2">
+                LogOut
                 </Link>
+               : <Link to="/login" variant="body2">
+               Sign in
+                </Link>
+               }
                 </Button>
               </Grid>
             </Grid>

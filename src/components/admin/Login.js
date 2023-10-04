@@ -47,11 +47,8 @@ const[password,setPassword]=useState('');
   useEffect(() => {
     if (isSuccess && user) { 
         if(user.role==="admin") navigate('/dashboard');
-        else {
-          if(user.role==="user") navigate('/espace')
-          else navigate('/logout')
-        };
-    }
+        else navigate('/')
+      }
   }, [ navigate,isSuccess, user])
 
 const handleSubmit=(event)=>{

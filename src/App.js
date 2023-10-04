@@ -54,14 +54,13 @@ function App() {
      
 </Route>
 
-<Route path="/menu"  element={<Menu/>}/>
-<Route path="/"  element={<CarouselHome/>}/>
 
 <Route element={<ProtectedRoutes2/>}>
 <Route path="/espace" element={<Espace/>}/>
 </Route>
 
-
+<Route path="/menu"  element={<Menu/>}/>
+<Route path="/"  element={<CarouselHome/>}/>
 <Route path="/login" element={<Login/>}/>
 <Route path="/logout" element={<Logout/>}/>
 <Route path="/register" element={<Register/>}/>

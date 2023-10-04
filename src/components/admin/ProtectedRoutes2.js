@@ -10,7 +10,7 @@ const ProtectedRoutes2 = () => {
    
  
     return(
-       user!==null &&  user.role==="user" ? <><Espace/><Outlet/></> : <Navigate to="/"/>  
+       user!==null &&  user.role==="user" ? <><Espace/></> : <Navigate to="/"/>  
     
     )
         
